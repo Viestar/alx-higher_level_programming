@@ -9,3 +9,4 @@
 ## 8-concat_edges.py
 ## 9-easter_egg.py
 ## 101-compile
+## 102-magic_calculation.py
