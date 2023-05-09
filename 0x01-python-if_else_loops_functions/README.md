@@ -9,3 +9,4 @@
 ## 6-print_comb3.py
 ## 7-islower.py
 ## 7-islower.py
+## 8-uppercase.py
