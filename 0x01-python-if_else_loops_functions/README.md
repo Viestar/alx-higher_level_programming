@@ -5,3 +5,5 @@
 ## 2-print_alphabet.py
 ## 3-print_alphabt.py
 ## 4-print_hexa.py
+0# 5-print_comb2.py
+## 6-print_comb3.py
