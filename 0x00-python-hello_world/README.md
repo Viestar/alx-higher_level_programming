@@ -10,3 +10,4 @@
 ## 9-easter_egg.py
 ## 101-compile
 ## 102-magic_calculation.py
+## 10-check_cycle.c
