@@ -28,7 +28,7 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new_list);
 	}
 
-	while ((*old_list).n != NULL)
+	while (old_list != NULL)
 	{
 		if ((old_list)->n < number)
 			old_list = old_list->n;
