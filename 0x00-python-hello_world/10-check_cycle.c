@@ -26,7 +26,8 @@ int check_cycle(listint_t *list)
 			chopper = (*chopper).next;
 			airjet = (*airjet).next->next;
 		}
-		return (1);
+		else
+			return (1);
 	}
 	return (0);
 }
