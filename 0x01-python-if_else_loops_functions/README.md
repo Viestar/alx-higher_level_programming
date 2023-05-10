@@ -14,3 +14,7 @@
 ## 10-add.py
 ## 11-pow.py
 ## 12-fizzbuzz.py
+## 13-insert_number.c
+## 100-print_tebahpla.py
+## 100-print_tebahpla.py
+## 101-remove_char_at.py
