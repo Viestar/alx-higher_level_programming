@@ -31,13 +31,14 @@ listint_t *insert_node(listint_t **head, int number)
 	while (old_list != NULL)
 	{
 		if ((old_list)->n < number)
-			old_list = old_list->n;
+			continue;
 		else
 		{
 			new_list->next = old_list->next;
 			old_list->next = new_list;
 			return (new_list);
 		}
+		old_list = old_list->n;
 	}
 
 	new_list->next = NULL;
