@@ -8,3 +8,4 @@
 ## 100-my_calculator.py
 ## 101-easy_print.py
 ## 102-magic_calculation.py
+## 103-fast_alphabet.py
