@@ -1,4 +1,4 @@
-# 1/usr/bin/python3
+#!/usr/bin/python3
 
 
 def max_integer(my_list=[]):
@@ -8,8 +8,8 @@ def max_integer(my_list=[]):
     if len_list == 0:
         return (None)
 
-    for i in range(len_list):
-        if my_list[i] > big_char:
-            big_char = my_list[i]
+    for x in range(len_list):
+        if my_list[x] > big_char:
+            big_char = my_list[x]
 
     return (big_char)
