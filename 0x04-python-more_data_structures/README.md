@@ -14,3 +14,4 @@
 ## 12-roman_to_int.py
 ## 100-weight_average.py
 ## 101-square_matrix_map.py
+## 102-complex_delete.py
