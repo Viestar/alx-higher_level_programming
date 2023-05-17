@@ -7,7 +7,7 @@ if __name__ == "__main__":
     contents = dir(hidden_4)
 
     for name in contents:
-        if name[0:2] != "__":
+        if name[0:2] == "__":
             pass
         else:
             print(name)
