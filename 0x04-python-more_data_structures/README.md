@@ -13,3 +13,4 @@
 ## 11-multiply_list_map.py
 ## 12-roman_to_int.py
 ## 100-weight_average.py
+## 101-square_matrix_map.py
