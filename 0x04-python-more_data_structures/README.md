@@ -12,3 +12,4 @@
 ## 10-best_score.py
 ## 11-multiply_list_map.py
 ## 12-roman_to_int.py
+## 100-weight_average.py
