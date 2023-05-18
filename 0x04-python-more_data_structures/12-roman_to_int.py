@@ -14,14 +14,13 @@ def roman_to_int(roman_string):
     }
 
     if (isinstance(roman_string, str) or roman_string is not None):
-        for index in range(str_len):
-            if romans.get(roman_string[index], 0) == 0:
-                return (0)
-            if (index != (str_len - 1) and romans[roman_string[index]] < romans[roman_string[index + 1]]):
-                integer = integer + (romans[roman_string[index]] * -1)
+        for index, rom in enumerate(roman_string):
+            if index != 0 and romans.get(rom) > romans.get(roman_string[index - 1]):
+                integer = integer + (romans.get(rom) - 2 *
+                                     romans.get(rom[index - 1]))
 
             else:
-                integer = integer + romans[roman_string[index]]
+                integer = integer + romans.get(rom)
     else:
         return (0)
 
