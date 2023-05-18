@@ -2,7 +2,6 @@
 
 def roman_to_int(roman_string):
     integer = 0
-    str_len = len(roman_string)
     romans = {
         "I": 1,
         "V": 5,
