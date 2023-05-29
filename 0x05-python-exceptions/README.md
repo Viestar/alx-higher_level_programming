@@ -4,3 +4,4 @@
 ## 2-safe_print_list_integers.py
 ## 3-safe_print_division.py
 ## 4-list_division.py
+## 5-raise_exception.py
