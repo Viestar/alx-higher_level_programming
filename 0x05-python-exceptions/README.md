@@ -8,3 +8,4 @@
 ## 6-raise_exception_msg.py
 ## 6-raise_exception_msg.py
 ## 100-safe_print_integer_err.py
+## 101-safe_function.py
