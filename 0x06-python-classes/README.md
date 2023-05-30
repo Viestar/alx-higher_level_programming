@@ -4,3 +4,4 @@
 ## 2-square.py
 ## 3-square.py
 ## 4-square.py
+## 5-square.py
