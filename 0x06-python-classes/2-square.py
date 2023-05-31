@@ -15,3 +15,4 @@ class Square:
             raise TypeError("size must be an integer")
         elif size <= -1:
             raise ValueError("size must be >= 0")
+        self.__size = size
