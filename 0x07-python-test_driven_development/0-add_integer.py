@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """Adding two integers """
 
+
 def add_integer(a, b=98):
     """ Adds two integerss
     Args:
     a (int): First integer
-    b (int): Second integer
-    REturns: Sum of the two integers
+    b (int, optional): Second integer
+    Returns: Sum of the two integers
     """
 
     if not isinstance(a, (int)):
