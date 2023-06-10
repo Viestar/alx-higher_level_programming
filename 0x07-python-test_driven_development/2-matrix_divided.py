@@ -14,7 +14,7 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")
-                        
+                   
     if len(matrix) == 0 or matrix is None:
         raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")
@@ -23,17 +23,16 @@ of integers/floats")
         if len(index) == 0:
             raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")
-            
+
         if not isinstance(index, list):
             raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")
-                            
-    
+
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    
+
     size = None
     for length in matrix:
         if size is None:
