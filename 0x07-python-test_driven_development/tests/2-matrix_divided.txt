@@ -1,0 +1,90 @@
+Test Documentaion for 2-matrix_divided.py module
+================================================
+
+Divides all elements of a matrix.
+
+Import the function from module:
+       >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Checking for the module docstring:
+        >>> module_doc = __import__("2-matrix_divided").__doc__
+	>>> len(module_doc) > 1
+	True
+
+Checking for the function docstring:
+	 >>> func_doc = __import__("2-matrix_divided").matrix_divided.__doc__
+	 >>> len(func_doc) > 1
+	 True
+
+Checking for required args:
+	 >>> matrix_divided()
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Checking for required arguments:
+	 >>> matrix_divided(matrix)
+	 Traceback (most recent call last):
+	 ...
+    	 TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Checking for required arguments:
+	 >>> matrix_divided(matrix, 5, 7)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
+Checking for passing None as matrix:
+	 >>> matrix_divided(None, 1)
+	 Traceback (most recent call last):
+         ...
+         TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for passing None as div:
+	 >>> matrix = [[11, 23, 30], [23, 54, 90]]
+	 >>> matrix_divided(matrix, None)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: div must be a number
+
+Checking for zero division:
+	 >>> matrix_divided(matrix, 0)
+	 Traceback (most recent call last):
+	 ...
+	 ZeroDivisionError: division by zero
+
+Checking for matrix as list:
+	 >>> matrix = "Matrix"
+	 >>> matrix_divided(matrix, 1)
+	 Traceback (most recent call last):
+         ...
+         TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for list of mixed list and non-list items:
+	 >>> matrix = [[1, 2, 3], "Matrix"]
+	 >>> matrix_divided(matrix, 2)
+	 Traceback (most recent call last):
+         ...
+         TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for mixed types:
+         >>> matrix = [["w", 4, " "], [83, 5.4, 9.8]]
+         >>> matrix_divided(matrix, 21)
+	 Traceback (most recent call last):
+         ...
+         TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for mixed types:
+         >>> matrix = [[10, (12,), 3], [2, (10,) 6.8]]
+         >>> matrix_divided(matrix, 12)
+         Traceback (most recent call last):
+         ...
+         TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for the div number:
+	 >>> matrix = [[4, 12, 45], [23, 28, 48]]
+	 >>> matrix_divided(matrix, "no int")
+	 Traceback (most recent call last):
+         ...
+         TypeError: div must be a number
+
