@@ -1,0 +1,62 @@
+0-add_integer.py module test documentation
+------------------------------------------
+
+This module strictly adds two integers, if a float is passed, it is
+first casted into an integer. TypeError incase of failure.
+
+Importing the function from the module:
+	  >>> add_integer = __import__("0-add_integer").add_integer
+
+Checking Module Docstring:
+	 >>> module_doc = __import__("0-add_integer").__doc__
+	 >>> len(module_doc) > 1
+	 True
+
+Checking for function Docstring:
+	 >>> func_doc = __import__("0-add_integer").add_integer.__doc__
+	 >>> len(func_doc) > 1
+	 True
+
+Checking for required args:
+	 >>> add_integer()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Checking more than required args:
+	 >>> add_integer(1, 2, 3)
+         Traceback (most recent call last):
+         ...
+	 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Checking for addition of positive integer:
+	 >>> add_integer(3, 3)
+	 6
+
+Checking for addition of negative and positive numbers:
+	 >>> add_integer(-3, 3)
+	 0
+
+Checking float with int:
+	 >>> add_integer(3, 4.3)
+	 7
+
+Checking int with float:
+	 >>> add_integer(7, 7.7)
+	 14
+
+Checking both float
+	 >>> add_integer(0.45, 8.1)
+	 8
+
+Checking non-number with number:
+	 >>> add_integer([1], 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: a must be an integer
+
+Checking non-number with number:
+	 >>> add_integer(1, [2])
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: b must be an integer
