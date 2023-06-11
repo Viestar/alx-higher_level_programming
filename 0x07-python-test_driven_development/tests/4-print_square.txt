@@ -1,0 +1,55 @@
+Test Documentaion for 4-print_square.py module
+================================================
+
+Prints a square of a special character.
+
+Function importation:
+	  >>> print_square = __import__("4-print_square").print_square
+
+Checking for module docstring:
+	 >>> module_doc = __import__("4-print_square").__doc__
+	 >>> len(module_doc) > 1
+	 True
+
+Checking for the function docstring:
+	 >>> func_doc = __import__("4-print_square").print_square.__doc__
+	 >>> len(func_doc) > 1
+	 True
+
+Checking for None args passed:
+	 >>> print_square()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_square() missing 1 required positional argument: 'size'
+
+Checking for too many arguments passed
+	 >>> print_square(1, 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_square() takes 1 positional argument but 2 were given
+
+Checking for size type:
+	 >>> print_square(("5"))
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+
+
+Checking for negative size:
+	 >>> print_square(-18)
+	 Traceback (most recent call last):
+         ...
+         ValueError: size must be >= 0
+
+Checking for non-int size types:
+	 >>> print_square(8.0)
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+
+
+Checking for real output:
+	 >>> print_square(2)
+	 ##
+	 ##
+
