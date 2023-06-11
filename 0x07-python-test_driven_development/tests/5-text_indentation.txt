@@ -1,0 +1,53 @@
+Test Documentaion for 5-text_indentation.py module
+================================================
+
+Splits converstaion using delimiters.
+
+
+Function importation:
+	  >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Checking for module docstring:
+	 >>> module_doc = __import__("5-text_indentation").__doc__
+	 >>> len(module_doc) > 1
+	 True
+
+Checking for function docstring:
+	 >>> func_doc = __import__("5-text_indentation").text_indentation.__doc__
+	 >>> len(func_doc) > 1
+	 True
+
+Checking for None args passed:
+	 >>> text_indentation()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Checking for too many arguments passed:
+	 >>> text_indentation("Hello", "Hi")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Checking for passing None as an argument:
+	 >>> text_indentation(None)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text must be a string
+
+Checking for passing incompatible type:
+	 >>> text_indentation(1)
+         Traceback (most recent call last):
+         ...
+         TypeError: text must be a string
+
+Checking for one word:
+	 >>> text_indentation("String")
+	 String
+
+Checking for newline at end:
+	 >>> text_indentation("Hello, You are welcome here\n")
+	 Hello, You are welcome here
+	 <BLANKLINE>
+	 <BLANKLINE>
+
