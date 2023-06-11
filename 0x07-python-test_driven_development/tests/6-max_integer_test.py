@@ -47,6 +47,25 @@ class TestMaxInteger(unittest.TestCase):
         list_n = [-4, -5, -23, -34, -45]
         self.assertEqual(max_integer(list_n), -1)
 
+    def test_endPositive(self):
+        """Tests for max at the end of all positive"""
+        end_pos = [4, 5, 3, 34, 45]
+        self.assertEqual(max_integer(end_pos), 45)
+
+    def test_middlePositive(self):
+        """Tests for max in the middles of all positive """
+        mid_pos = [4, 5, 250, 34, 45]
+        self.assertEqual(max_integer(mid_pos), 250)
+
+    def test_begPositive(self):
+        """Tests for max at the beginning with all positive"""
+        beg_pos = [120, 5, 3, 34, 45]
+        self.assertEqual(max_integer(beg_pos), 120)
+
+    def test_negOne(self):
+        """Tests for one negative"""
+        on_l = [46, 5, -3, 34, 45]
+        self.assertEqual(max_integer(on_l), 46)
 
 if __name__ == "__main__":
     unittest.main()
