@@ -20,7 +20,7 @@ Checking for arguments passed:
 	 >>> say_my_name("CS", "50", "Course")
 	 Traceback (most recent call last):
 	 ...
-	 TypeError: say_my_name() takes only two positional arguments.
+	 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given.
 
 Checking for regular use:
 	 >>> say_my_name("Sylivester", "Mberenge")
