@@ -1,0 +1,52 @@
+Test Documentaion for say_my_name.py module
+================================================
+
+Displays a full name.
+
+Function importation:
+	  >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Checking for module docstring:
+	 >>> module_doc = __import__("3-say_my_name").__doc__
+	 >>> len(module_doc) > 1
+	 True
+
+Checking for function docstring:
+	 >>> func_doc = __import__("3-say_my_name").say_my_name.__doc__
+	 >>> len(func_doc) > 1
+	 True
+
+Checking for arguments passed:
+	 >>> say_my_name("CS", "50", "Course")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: say_my_name() takes only two positional arguments.
+
+Checking for regular use:
+	 >>> say_my_name("Sylivester", "Mberenge")
+	 My name is Sylivester Mberenge
+
+Checking for None argument as first name:
+	 >>> say_my_name(None, "Mberenge")
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for None argument as last name:
+	 >>> say_my_name("Sylivester", None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking for first name wrong type:
+         >>> say_my_name(20.00, "Mberenge")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for last name wrong type:
+         >>> say_my_name("Sylivester", 20.00)
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
