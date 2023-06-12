@@ -1,0 +1,21 @@
+7-base_geometry module Documentation
+====================================
+
+Module importation:
+        >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Module docstring checker:
+	 >>> module_doc = __import__("7-base_geometry").__doc__
+	 >>> len(module_doc) > 1
+	 True
+
+Function docstring checker:
+	 >>> method_doc = __import__("7-base_geometry").MyList.print_sorted.__doc__
+	 >>> len(method_doc) > 1
+	 True
+
+Class docstring checker:
+	 >>> class_doc = __import__("7-base_geometry").MyList.__doc__
+	 >>> len(class_doc) > 1
+	 True
+
