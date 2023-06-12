@@ -5,3 +5,5 @@
 ## 1-my_list.py, tests/1-my_list.txt
 
 ## 2-is_same_class.py
+
+## 3-is_kind_of_class.py
