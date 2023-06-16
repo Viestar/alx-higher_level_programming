@@ -3,7 +3,7 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """ Appends new_string after the search_string 
+    """ Appends new_string after the search_string
 
     Args:
     filename (file): File to be appended
