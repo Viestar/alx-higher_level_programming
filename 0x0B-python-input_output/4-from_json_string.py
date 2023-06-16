@@ -6,10 +6,10 @@ import json
 
 
 def from_json_string(my_str):
-    """returns an object(python data structure) 
+    """returns an object(python) 
 
     Args: my_str (JSON string): json string.
     Return: object, the python data structure
     """
-    object = json.load(my_str)
+    object = json.loads(my_str)
     return object
