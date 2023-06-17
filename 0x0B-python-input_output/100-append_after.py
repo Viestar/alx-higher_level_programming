@@ -20,4 +20,5 @@ def append_after(filename="", search_string="", new_string=""):
                 mideh.write(new_string)
             else:
                 continue
+    mideh.close()
     return mideh
