@@ -114,3 +114,17 @@ class Rectangle(Base):
 
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """ Assigns arguments to each attribute """
+        self.id = args[1]
+
+    def to_dictionary(self):
+        """returns a dictionary of a Rectangle object"""
+        rec_dic = {}
+        rec_dic["id"] = self.id
+        rec_dic["width"] = self.width
+        rec_dic["height"] = self.height
+        rec_dic["x"] = self.x
+        rec_dic["y"] = self.y
+        return rec_dic
