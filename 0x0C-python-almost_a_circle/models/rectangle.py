@@ -100,7 +100,11 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints the Rectangle in stdout wwith character # """
+        for a in range(self.__y):
+            print()
         for b in range(self.__height):
+            for c in range(self.__x):
+                print(' ', end="")
             for d in range(self.__width):
                 print('#', end="")
             print()
