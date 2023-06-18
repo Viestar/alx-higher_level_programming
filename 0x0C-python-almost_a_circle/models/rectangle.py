@@ -97,3 +97,10 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def display(self):
+        """ Prints the Rectangle in stdout wwith character # """
+        for b in range(self.__height):
+            for d in range(self.__width):
+                print('#', end="")
+            print()
