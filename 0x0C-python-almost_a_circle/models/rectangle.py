@@ -30,7 +30,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def x(self, value):
+    def width(self, value):
         """Sets width and reports in case of errors
 
         Args:
