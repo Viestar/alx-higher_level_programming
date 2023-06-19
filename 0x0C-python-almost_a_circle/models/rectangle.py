@@ -98,9 +98,45 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def update(self, *args, **kwargs):
+        """ Assigns arguments to each attribute """
+        if len(args):
+            for arg, att in enumerate(args):
+                if arg == 0:
+                    self.id = att
+                elif arg == 1:
+                    self.width = att
+                elif arg == 2:
+                    self.height = att
+                elif arg == 3:
+                    self.x = att
+                elif arg == 4:
+                    self.y = att
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """returns att dictionary of att Rectangle object"""
+        rec_dic = {}
+        rec_dic["id"] = self.id
+        rec_dic["width"] = self.width
+        rec_dic["height"] = self.height
+        rec_dic["x"] = self.x
+        rec_dic["y"] = self.y
+        return rec_dic
+
     def display(self):
         """ Prints the Rectangle in stdout wwith character # """
-        for a in range(self.__y):
+        for att in range(self.__y):
             print()
         for b in range(self.__height):
             for c in range(self.__x):
@@ -114,17 +150,3 @@ class Rectangle(Base):
 
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
-
-    def update(self, *args):
-        """ Assigns arguments to each attribute """
-        self.id = args[1]
-
-    def to_dictionary(self):
-        """returns a dictionary of a Rectangle object"""
-        rec_dic = {}
-        rec_dic["id"] = self.id
-        rec_dic["width"] = self.width
-        rec_dic["height"] = self.height
-        rec_dic["x"] = self.x
-        rec_dic["y"] = self.y
-        return rec_dic
