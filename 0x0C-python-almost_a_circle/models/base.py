@@ -3,6 +3,8 @@
 
 
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -85,3 +87,84 @@ class Base:
         except:
             pass
         return json_from_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialises.
+        Args:
+            list_objs (list): A list of inherited Base instances.
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as csv_file:
+            if list_objs is None or list_objs == []:
+                csv_file.write("[]")
+            else:
+                if cls.__name__ == "Square":
+                    holders = ["id", "size", "x", "y"]
+                else:
+                    holders = ["id", "width", "height", "x", "y"]
+                csv_written = csv.DictWriter(csv_file, holders=holders)
+                for obj in list_objs:
+                    csv_written.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Deserialises.
+        Returns:
+            an empty list or a list of instantiated classes.
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as csv_file:
+                if cls.__name__ == "Square":
+                    holders = ["id", "size", "x", "y"]
+                else:
+                    holders = ["id", "width", "height", "x", "y"]
+                csv_read = csv.DictReader(csv_file, holders=holders)
+                csv_read = [dict([k, int(v)] for k, v in d.items())
+                            for d in csv_read]
+                return [cls.create(**d) for d in csv_read]
+        except IOError:
+            return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Uses turtle module to draw Rectangles and Squares.
+        Args:
+            list_rectangles (list): Properties to draw.
+            list_squares (list): Properties to draw.
+        """
+
+        window = turtle.Turtle()
+        window.pensize(4)
+        window.shape("square")
+        window.screen.bgcolor("#F5F5F5")
+        window.color("#BF7609")
+
+        window.color("#7D0552")
+        for drawer in list_rectangles:
+            window.showturtle()
+            window.up()
+            window.goto(drawer.x, drawer.y)
+            window.down()
+            for index in range(2):
+                window.forward(drawer.width)
+                window.left(90)
+                window.forward(drawer.height)
+                window.left(90)
+            window.hideturtle()
+
+        window.color("#461B7E")
+        for drawer in list_squares:
+            window.showturtle()
+            window.up()
+            window.goto(drawer.x, drawer.y)
+            window.down()
+            for index in range(2):
+                window.forward(drawer.width)
+                window.left(90)
+                window.forward(drawer.height)
+                window.left(90)
+            window.hideturtle()
+
+        turtle.exitonclick()
