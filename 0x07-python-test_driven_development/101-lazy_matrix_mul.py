@@ -8,6 +8,6 @@ def lazy_matrix_mul(m_a, m_b):
     matrix_one = num.array(m_a)
     matrix_two = num.array(m_b)
 
-    product = num.dot(matrix_one, matrix_two).reshape(-1, 1)
+    product = num.dot(matrix_one, matrix_two)
 
-    return product.tolist()
+    return product
