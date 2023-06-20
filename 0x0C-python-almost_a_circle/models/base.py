@@ -84,7 +84,7 @@ class Base:
                 json_from_list = cls.from_json_string(myFile.read())
             for x, y in enumerate(json_from_list):
                 json_from_list[x] = cls.create(**json_from_list[x])
-        except:
+        finally:
             pass
         return json_from_list
 
