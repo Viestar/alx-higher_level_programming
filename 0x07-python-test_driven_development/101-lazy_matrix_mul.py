@@ -10,4 +10,4 @@ def lazy_matrix_mul(m_a, m_b):
 
     product = num.dot(matrix_one, matrix_two)
 
-    return product.tolist()
+    return product
