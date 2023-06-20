@@ -64,4 +64,4 @@ Checking non-number with number:
 
 Checking long long int:
 	 >>> add_integer(555555555555555555599999, 1)
-	 600000000000000000000000
+	 555555555555555555600000
