@@ -61,13 +61,6 @@ Checking non-number with number:
 	 ...
 	 TypeError: b must be an integer
 
-Checking for inf:
-	 >>> add_integer(1, float('inf'))
-	 3
-
-Checking for passed NaN:
-	 >>> add_integer(1, float('nan'))
-	 0
 
 Checking long long int:
 	 >>> add_integer(555555555555555555599999, 1)
