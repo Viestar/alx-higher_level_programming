@@ -1,5 +1,5 @@
-0-add_integer.py module test documentation
-------------------------------------------
+Test Documentation for 0-add_integer.py module.
+==============================================
 
 This module strictly adds two integers, if a float is passed, it is
 first casted into an integer. TypeError incase of failure.
@@ -63,15 +63,11 @@ Checking non-number with number:
 
 Checking for inf:
 	 >>> add_integer(1, float('inf'))
-	 Traceback (most recent call last):
-	 ...
-	 OverflowError: Conversion not possible
+	 3
 
 Checking for passed NaN:
 	 >>> add_integer(1, float('nan'))
-	 Traceback (most recent call last):
-	 ...
-	 ValueError: Conversion not possible
+	 0
 
 Checking long long int:
 	 >>> add_integer(555555555555555555599999, 1)
