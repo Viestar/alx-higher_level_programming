@@ -42,7 +42,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Updates the attributes 
+        """Updates the attributes
         Args:
             args (list): list of arguments
             kwargs (dict): Keyword arguments
