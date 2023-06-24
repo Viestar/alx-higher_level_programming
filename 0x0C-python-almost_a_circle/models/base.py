@@ -90,41 +90,28 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Serialises.
-        Args:
-            list_objs (list): A list of inherited Base instances.
-        """
+        """save instance to csv file"""
         filename = cls.__name__ + ".csv"
-        with open(filename, "w", newline="") as csv_file:
-            if list_objs is None or list_objs == []:
-                csv_file.write("[]")
-            else:
-                if cls.__name__ == "Square":
-                    holders = ["id", "size", "x", "y"]
-                else:
-                    holders = ["id", "width", "height", "x", "y"]
-                csv_written = csv.DictWriter(csv_file, holders=holders)
-                for obj in list_objs:
-                    csv_written.writerow(obj.to_dictionary())
+        if list_objs is None:
+            list_objs = []
+        with open(filename, 'w', newline='') as file:
+            csv_writer = csv.writer(file)
+            for obj in list_objs:
+                csv_writer.writerow(obj.to_csv_row())
 
     @classmethod
     def load_from_file_csv(cls):
-        """ Deserialises.
-        Returns:
-            an empty list or a list of instantiated classes.
-        """
+        """load from csv file"""
         filename = cls.__name__ + ".csv"
         try:
-            with open(filename, "r", newline="") as csv_file:
-                if cls.__name__ == "Square":
-                    holders = ["id", "size", "x", "y"]
-                else:
-                    holders = ["id", "width", "height", "x", "y"]
-                csv_read = csv.DictReader(csv_file, holders=holders)
-                csv_read = [dict([k, int(v)] for k, v in d.items())
-                            for d in csv_read]
-                return [cls.create(**d) for d in csv_read]
-        except IOError:
+            with open(filename, 'r', newline='') as file:
+                reader = csv.reader(file)
+                objs = []
+                for row in reader:
+                    objx = cls.create_from_csv_row(row)
+                    objs.append(objx)
+                    return objs
+        except FileNotFoundError:
             return []
 
     @staticmethod
