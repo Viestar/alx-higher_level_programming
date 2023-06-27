@@ -1,6 +1,4 @@
 
-![Dev ops](assets/hl.png)
-
 ## Table of contents
 Project Code | Project Name | Description
 -----|------ | -----------
