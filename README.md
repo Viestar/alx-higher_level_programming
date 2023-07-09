@@ -1,7 +1,7 @@
 
 ![Manual](./assets/dev.png)
 # Table of contents
-## Project Code | Project Name | Description
+Project Code | Project Name | Description
 ----- | ------ | -----------
 [0x00] | [Python-hello_world](./0x00-python-hello_world) | Introduction to Python
 [0x01] | [python-if_else_loops_functions](./0x01-python-if_else_loops_functions) | Python if , else, functions and loops
