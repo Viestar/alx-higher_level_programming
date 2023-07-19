@@ -1,6 +1,7 @@
 -- Retrieves only top 3 using LIMIT
-SELECT city, temperature
-FROM temperatures
+SELECT `city`, AVG(`valu`) AS `average_temperature`
+FROM `temperatures`
 WHERE MONTH(date) IN (7, 8)
-ORDER BY temperature DESC
+GROUP BY `city`
+ORDER BY `average_temperature` DESC
 LIMIT 3;
