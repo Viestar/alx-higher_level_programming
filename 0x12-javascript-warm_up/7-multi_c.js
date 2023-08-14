@@ -3,7 +3,12 @@
 
 const args = process.argv[2];
 let index = 0;
-while (index < args) {
-    console.log("C is fun");
-    index++;
-}
+
+if (isNaN(args)) {
+    console.log("Missing number of occurrences");
+} else {
+    while (index < args) {
+        console.log("C is fun");
+        index++;
+    }
+};
