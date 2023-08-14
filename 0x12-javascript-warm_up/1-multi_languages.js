@@ -1,2 +1,3 @@
 #!/usr/bin/node
-console.log("C is fun"), console.log("Python is Cool"), console.log("JavaScript is amazing");
+// A script that prints "C is fun", "Python is Cool" and "JavaScript is amazing" on different lines
+console.log("C is fun\nPython is Cool\navaScript is amazing");
