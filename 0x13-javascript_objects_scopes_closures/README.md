@@ -7,3 +7,4 @@ Project Code | Project Name | Description
 [0x01] | [Rectangle #1](./1-rectangle.js) | A Rectangle class with a constructor intitialising height and width
 [0x02] | [Rectangle #2](./2-rectangle.js) | A Rectangle class with a constructor intitialising height and width and creates an empty object incase 0 is passed as a value.
 [0x03] | [Rectangle #3](./3-rectangle.js) | A Rectangle class with a constructor intitialising height and width and creates an empty object incase 0 is passed as a value with a method that prints the rectangle using character X.
+[0x04] | [Rectangle #4](./4-rectangle.js) | A Rectangle class with a constructor intitialising height and width and creates an empty object incase 0 is passed as a value with a method that prints the rectangle using character X, echanges the height with width and multiplies both by two.
