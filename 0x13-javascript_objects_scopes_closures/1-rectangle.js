@@ -2,9 +2,9 @@
 
 // Rectangle class with a constructor intitialising height and width
 
-module.exports = class Rectangle {
+class Rectangle {
   constructor (w, h) {
     this.width = w;
     this.height = h;
   }
-};
+}
