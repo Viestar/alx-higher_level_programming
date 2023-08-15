@@ -5,4 +5,5 @@ Project Code | Project Name | Description
 ----- | ------ | -----------
 [0x00] | [Rectangle #0](./0-rectangle.js) | An empty class Rectangle that defines a rectangle:
 [0x01] | [Rectangle #1](./1-rectangle.js) | A Rectangle class with a constructor intitialising height and width
-[0x02] | [Rectangle #2](./1-rectangle.js) | A Rectangle class with a constructor intitialising height and width and creates an empty object incase 0 is passed as a value.
+[0x02] | [Rectangle #2](./2-rectangle.js) | A Rectangle class with a constructor intitialising height and width and creates an empty object incase 0 is passed as a value.
+[0x03] | [Rectangle #3](./3-rectangle.js) | A Rectangle class with a constructor intitialising height and width and creates an empty object incase 0 is passed as a value with a method that prints the rectangle using character X.
