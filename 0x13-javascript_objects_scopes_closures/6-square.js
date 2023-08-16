@@ -4,11 +4,11 @@
 const Squared = require('./5-square');
 module.exports = class Square extends Squared {
   charPrint (c) {
-    if (c === undefined) {
+    if (!c) {
       this.print();
     } else {
       for (let i = 0; i < this.width; i++) {
-        console.log('C'.repeat(this.height));
+        console.log(c.repeat(this.height));
       }
     }
   }
