@@ -2,5 +2,5 @@
 // increments and calls a function.
 
 exports.addMeMaybe = function (num, theFunction) {
-    theFunction(num++);
+  theFunction(num++);
 };

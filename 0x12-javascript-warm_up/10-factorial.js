@@ -2,7 +2,7 @@
 // a script that computes and prints a factorial
 
 const number = process.argv[2];
-function factorial(number) {
+function factorial (number) {
   if (isNaN(number) || number === 1) {
     return (1);
   } else {
