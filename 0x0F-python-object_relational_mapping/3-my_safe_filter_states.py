@@ -12,8 +12,8 @@ if __name__ == "__main__":
         curSor = db.cursor()
         query = "SELECT * FROM `states` WHERE `name`='{}' \
                        ORDER BY `id` ASC".format(argv[4])
-        params = (argv[4])
-        curSor.execute(query, params)
+        params = argv[4]
+        curSor.execute(query, (params,))
         [print(state) for state in curSor.fetchall() if state[1] == argv[4]]
         curSor.close(), db.close()
     else:
