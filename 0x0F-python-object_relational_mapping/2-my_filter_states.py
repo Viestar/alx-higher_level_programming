@@ -9,10 +9,10 @@ if __name__ == "__main__":
     if len(argv) == 5:
         db = Qdb.connect(host="localhost", port=3306,
                          user=argv[1], passwd=argv[2], db=argv[3])
+        curSor = db.cursor()
+        curSor.execute("SELECT * FROM `states` WHERE `name`='{}' \
+                       ORDER BY `id` ASC".format(argv[4]))
+        [print(state) for state in curSor.fetchall()]
+        curSor.close(), db.close()
     else:
         sys.exit(1)
-    curSor = db.cursor()
-    curSor.execute("SELECT * FROM `states` WHERE `name`='{}' ORDER BY `id` ASC"
-                   .format(argv[4]))
-    [print(state) for state in curSor.fetchall() if state == argv[4]]
-    curSor.close(), db.close()
