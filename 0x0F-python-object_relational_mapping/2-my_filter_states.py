@@ -12,7 +12,7 @@ if __name__ == "__main__":
         curSor = db.cursor()
         curSor.execute("SELECT * FROM `states` WHERE `name`='{}' \
                        ORDER BY `id` ASC".format(argv[4]))
-        [print(state) for state in curSor.fetchall()]
+        [print(state) for state in curSor.fetchall() if state[1] == argv[4]]
         curSor.close(), db.close()
     else:
         sys.exit(1)
