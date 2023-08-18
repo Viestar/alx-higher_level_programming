@@ -12,6 +12,6 @@ if __name__ == "__main__":
     else:
         sys.exit(1)
     curSor = db.cursor()
-    curSor.execute("SELECT * FROM `states` ORDER BY `id` ASC")
-    [print(state) for state in curSor.fetchall() if state == argv[4]]
+    curSor.execute(f"SELECT * FROM `states` WHERE `name` = '{argv[4]}'")
+    [print(state) for state in curSor.fetchall()]
     curSor.close(), db.close()
