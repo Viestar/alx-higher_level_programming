@@ -8,6 +8,6 @@ Project Code | Project Name | Description
 [0x02] | [Filter states by user input](./2-my_filter_states.py) | A  script that lists all states from the database hbtn_0e_0_usa where name is the last argument passed.
 [0x03] | [SQL Injection...](./3-my_safe_filter_states.py) | An SQL injection proof script that lists all states from the database hbtn_0e_0_usa where name is the last argument passed.
 [0x04] | [Cities by states](./4-cities_by_state.py) | An SQL injection proof script that lists all cities from the database hbtn_0e_0_usa.
-[0x04] | [Cities by states](./5-filter_cities.py) | An SQL injection proof script that lists all cities from the database hbtn_0e_0_usa.
-[0x6] | [First state model](./model_state.py
-) | A python file defining State class from Base creating table states """
+[0x05] | [Cities by states](./5-filter_cities.py) | An SQL injection proof script that lists all cities from the database hbtn_0e_0_usa.
+[0x06] | [First state model](./model_state.py) | A python file defining State class from Base creating table states
+[0x07] | [All states via SQLAlchemy](./7-model_state_fetch_all.py) | A script that uses sqlalchemy orm to list all states.
