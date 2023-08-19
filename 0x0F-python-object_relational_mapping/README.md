@@ -11,4 +11,5 @@ Project Code | Project Name | Description
 [0x05] | [Cities by states](./5-filter_cities.py) | An SQL injection proof script that lists all cities from the database hbtn_0e_0_usa.
 [0x06] | [First state model](./model_state.py) | A python file defining State class from Base creating table states
 [0x07] | [ First state](./8-model_state_fetch_first.py) | A script that uses sqlalchemy orm to list the first state.
-[0x08] | [Contains `a`](./9-model_state_filter_a.py) | A script that uses sqlalchemy orm to list states that contain letter a
+[0x09] | [Contains `a`](./9-model_state_filter_a.py) | A script that uses sqlalchemy orm to list states that contain letter a
+[0x10] | [Get a state](./10-model_state_my_get.py) | A SQL injection free script that prints the id of a given state.
