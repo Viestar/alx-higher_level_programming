@@ -14,3 +14,4 @@ Project Code | Project Name | Description
 [0x09] | [Contains `a`](./9-model_state_filter_a.py) | A script that uses sqlalchemy orm to list states that contain letter a
 [0x10] | [Get a state](./10-model_state_my_get.py) | A SQL injection free script that prints the id of a given state.
 [0x11] | [Add a new state](./11-model_state_insert.py) | A SQL injection free script that adds a new state and prints its ID.
+[0x12] | [Update state](./12-model_state_update_id_2.py) | A SQL injection free script that updates a new state and prints its ID
