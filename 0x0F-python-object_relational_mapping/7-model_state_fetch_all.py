@@ -12,9 +12,9 @@ if __name__ == "__main__":
     if len(argv) == 4:
         engine = create_engine(
             f"mysql+mysqldb://{argv[1]}:{argv[2]}@'localhost/{argv[3]}'")
-        Session = sessionmaker()
+        Session = sessionmaker(bind=engine)
         session = Session()
         [print(f"{state.id}: {state.name}") for state in
-            session.query(State).order_by(State.id)]
+            session.query(State).order_by(State.id).all()], session.close()
     else:
         sys.exit(1)
