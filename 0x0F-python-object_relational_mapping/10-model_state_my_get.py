@@ -14,10 +14,10 @@ if __name__ == "__main__":
         Session = sessionmaker(bind=engine)
         session = Session()
         param = argv[4]
-        state = session.query(State).filter(State.name == param)
-        if state:
-            print(state.id)
-        else:
-            print("Not found")
+        for state in session.query(State):
+            if state.name == param:
+                print(state.id)
+            else:
+                print("Not found")
     else:
-        sys.exit()
+        sys.exit(1)
