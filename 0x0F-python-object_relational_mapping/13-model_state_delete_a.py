@@ -15,8 +15,7 @@ if __name__ == "__main__":
         session = Session()
 
         [session.delete(state) for state in session.query(State)
-            if "a" in state.name]
-        session.commit()
+            if "a" in state.name], session.commit()
         session.close()
     else:
         sys.exit(1)
