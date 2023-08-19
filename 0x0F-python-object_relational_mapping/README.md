@@ -16,3 +16,4 @@ Project Code | Project Name | Description
 [0x11] | [Add a new state](./11-model_state_insert.py) | A SQL injection free script that adds a new state and prints its ID.
 [0x12] | [Update state](./12-model_state_update_id_2.py) | A SQL injection free script that updates a new state and prints its ID
 [0x13] | [Delete states](./13-model_state_delete_a.py) | A SQL injection free script that deletes state containing "a"
+[0x14] | [Cities in state](./14-model_city_fetch_by_state.py) [model_city](./model_city.py)| A script creating a table using suu
