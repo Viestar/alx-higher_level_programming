@@ -10,9 +10,8 @@ import sys
 
 if __name__ == "__main__":
     if len(argv) == 4:
-        url = "mysql+mysqldb://%s:%s@localhost/%s"
-        params = (argv[1], argv[2], argv[3])
-        engine = create_engine(url, params)
+        url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
+        engine = create_engine(url)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
