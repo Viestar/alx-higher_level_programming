@@ -15,10 +15,10 @@ if __name__ == "__main__":
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
-        for state in session.query(City).order_by(State.id):
-            print(f"{state.id}: {state.name}")
-            for city in session.query(State).order_by(City.id):
-                print(f"\t{city.id}: {city.name}")
+
+        [print(f"{state.id}: {state.name}\n\t{city.id}: {city.name}")
+            for state in session.query(City).order_by(City.id)
+            for city in session.query(State).order_by(State.id)]
         session.close()
     else:
         sys.exit(1)
