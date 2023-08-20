@@ -18,6 +18,8 @@ if __name__ == "__main__":
         session = Session()
 
         [print(f"{state.id}: {state.name}\n \t{city.id}: {city.name}")
-            for state, city in session.query(City, State)], session.close()
+            for state, city in session.query(City.order_by(City.id),
+                                             State.order_by(State.id))]
+        session.close()
     else:
         sys.exit(1)
