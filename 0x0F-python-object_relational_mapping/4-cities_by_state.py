@@ -10,10 +10,9 @@ if __name__ == "__main__":
         db = Qdb.connect(host="localhost", port=3306,
                          user=argv[1], passwd=argv[2], db=argv[3])
         curSor = db.cursor()
-        query = ("SELECT cities.id, cities.name, states.name \
+        curSor.execute("SELECT cities.id, cities.name, states.name \
             FROM cities JOIN states ON cities.state_id = states.id \
             ORDER BY cities.id ASC")
-        curSor.execute(query)
         [print(city) for city in curSor.fetchall()], curSor.close(), db.close()
     else:
         sys.exit(1)
