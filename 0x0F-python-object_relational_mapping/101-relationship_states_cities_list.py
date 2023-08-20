@@ -16,9 +16,8 @@ if __name__ == "__main__":
         session = Session()
 
         for state in session.query(State).order_by(State.id):
-            print(f"{state.id}: {state.name}")
-            for city in session.query(City).order_by(City.id):
-                print(f"\t{city.id}: {city.name}")
-        session.close()
+            print("{}: {}".format(state.id, state.name))
+            for city in state.cities:
+                print("    {}: {}".format(city.id, city.name))
     else:
         sys.exit(1)
