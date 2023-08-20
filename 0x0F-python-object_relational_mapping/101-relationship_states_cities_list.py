@@ -14,10 +14,17 @@ if __name__ == "__main__":
         engine = create_engine(url)
         Session = sessionmaker(bind=engine)
         session = Session()
+        states_cities = session.query(State, City) \
+            .join(City).order_by(State.id, City.id).all()
 
-        for state in session.query(State).order_by(State.id):
-            print("{}: {}".format(state.id, state.name))
-            for city in state.cities:
-                print("    {}: {}".format(city.id, city.name))
+        current_state = None
+        for state, city in states_cities:
+            if state != current_state:
+                print(f"{state.id}: {state.name}")
+                current_state = state
+            print(f"\t{city.id}: {city.name}")
+
+        # Close the session
+        session.close()
     else:
         sys.exit(1)
