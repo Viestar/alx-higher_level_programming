@@ -17,3 +17,5 @@ Project Code | Project Name | Description
 [0x12] | [Update state](./12-model_state_update_id_2.py) | A SQL injection free script that updates a new state and prints its ID
 [0x13] | [Delete states](./13-model_state_delete_a.py) | A SQL injection free script that deletes state containing "a"
 [0x14] | [Cities in state](./14-model_city_fetch_by_state.py) [model_city](./model_city.py)| A script creating a table using suu
+[0x15] | [City relationship](./relationship_city.py) [State relationship](./relationship_state.py) [Add city](./100-relationship_states_cities.py)| Relationship between city and State established. A script that adds a new city and state.
+[0x16] | [List relationship](./101-relationship_states_cities_list.py) | A script that Uses relation to list objects from two tables.
