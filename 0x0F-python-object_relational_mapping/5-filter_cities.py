@@ -16,5 +16,6 @@ if __name__ == "__main__":
         curSor.execute(query)
         [print(", ".join(city[2])) for city in
             curSor.fetchall() if city == params]
+        curSor.cloe(), db.close()
     else:
         sys.exit(1)
