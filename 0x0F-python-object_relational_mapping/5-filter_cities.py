@@ -10,10 +10,11 @@ if __name__ == "__main__":
         db = Qdb.connect(host="localhost", port=3306,
                          user=argv[1], passwd=argv[2], db=argv[3])
         curSor = db.cursor()
-        query = "SELECT * FROM cities INNER JOIN states ON \
-        cities.state_id = state.id WHERE state.name=%s ORDER BY cities.id ASC"
         params = argv[4]
-        curSor.execute(query, (params,))
+        curSor.execute("""SELECT cities.id, cities.name, states.name
+            FROM cities INNER JOIN states ON cities.state_id = states.id
+            WHERE states.name=%s
+            ORDER BY id ASC""", (params,))
         [print(", ".join(city[1])) for city in curSor.fetchall()]
         curSor.cloe(), db.close()
     else:
