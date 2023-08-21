@@ -14,16 +14,13 @@ if __name__ == "__main__":
             passwd=argv[2],
             db=argv[3]
     )
-    cursor = db.cursor()
+    curSor = db.cursor()
     query = "SELECT cities.id, cities.name, states.name \
             FROM cities JOIN states ON cities.state_id = states.id \
             WHERE states.name = %s ORDER BY cities.id ASC"
     param = argv[4]
-    cursor.execute(query, (param,))
-    city_rows = cursor.fetchall()
+    curSor.execute(query, (param,))
 
-    cities = [city[1] for city in city_rows]
-    formated_city_name = ", ".join(cities)
-    print(formated_city_name)
-    cursor.close()
+    [print(", ".join(city[1])) for city in curSor.fetchall()]
+    curSor.close()
     db.close()
