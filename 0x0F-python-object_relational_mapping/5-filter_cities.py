@@ -7,18 +7,22 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) == 5:
-
+        ur = argv[1]
+        pd = argv[2]
+        de = argv[3]
+        se = argv[4]
+        cs = []
         db = Qdb.connect(host="localhost", port=3306,
-                         user=argv[1], passwd=argv[2], db=argv[3])
+                         user=ur, passwd=pd, db=de)
         curSor = db.cursor()
-        params = argv[4]
         curSor.execute("""SELECT cities.id, cities.name, states.name
             FROM cities INNER JOIN states ON cities.state_id = states.id
             WHERE states.name=%s
-            ORDER BY id ASC""", (params,))
+            ORDER BY id ASC""", (se,))
         rows = curSor.fetchall()
         for row in rows:
-            print(', '.join(row[1]))
+            cs.append(row[1])
+            print(', '.join(row))
             curSor.close()
             db.close()
     else:
