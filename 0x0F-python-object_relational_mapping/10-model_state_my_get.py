@@ -15,10 +15,10 @@ if __name__ == "__main__":
         Session = sessionmaker(bind=engine)
         session = Session()
         param = argv[4]
-        right_state = [state[0] for state in session.query(State)
+        right_state = [state for state in session.query(State)
                        .filter_by(name=param).first()]
-        if right_state:
-            print(right_state)
+        if right_state is not None:
+            print(right_state.id)
         else:
             print("Not found")
         session.close()
