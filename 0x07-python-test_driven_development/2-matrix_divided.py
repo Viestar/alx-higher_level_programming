@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" Matrix Division Documentation """
+"""Matrix Division Documentation """
 
 
 def matrix_divided(matrix, div):
     """Divides a matrix by either an integer or a float
 
-    Args:r622wz
+    Args:
     matrix (list): MAtrix
     div (int, float): Integer of flaot
     Returns: Resultant matrix
@@ -14,7 +14,7 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")
-
+                   
     if len(matrix) == 0 or matrix is None:
         raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")

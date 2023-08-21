@@ -16,3 +16,10 @@ Project Code | Project Name | Description
 [0x0A] | [python-inheritance](./0x0A-python-inheritance) | Python inheritance
 [0x0B] | [python-input_output](./0x0B-python-input_output) | Python input output
 [0x0C] | [python-almost_a_circle](./0x0C-python-almost_a_circle) | Python almost a circle
+
+   
+   
+   
+   
+   
+![Manual](./assets/Screenshot%20from%202023-07-09%2012-10-11.png)

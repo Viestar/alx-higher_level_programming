@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Documenation for the save_to_json function"""
+"""save_to_json function documentation"""
 
 
 import json

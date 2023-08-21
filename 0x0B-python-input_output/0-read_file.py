@@ -5,5 +5,5 @@
 def read_file(filename=""):
     """Reads and prints a file to the standard output"""
 
-    with open(filename, encoding='utf-8') as myFile:
-        print(myFile.read(), end="")
+    with open(filename, encoding='utf-8') as mideh:
+        print(mideh.read(), end="")
