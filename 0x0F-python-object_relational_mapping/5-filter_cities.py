@@ -12,11 +12,15 @@ if __name__ == "__main__":
                          user=argv[1], passwd=argv[2], db=argv[3])
         curSor = db.cursor()
         params = argv[4]
-        curSor.execute("""SELECT cities.id, cities.name, states.name
-            FROM cities INNER JOIN states ON cities.state_id = states.id
-            WHERE states.name=%s
-            ORDER BY id ASC""", (params,))
-        [print(", ".join(city[1])) for city in curSor.fetchall()]
-        curSor.cloe(), db.close()
+        query = "SELECT cities.id, cities.name, states.name \
+            FROM cities INNER JOIN states ON cities.state_id = states.id \
+            WHERE states.name=%s ORDER BY id ASC"
+        curSor.execute(query, (params,))
+
+        city_date = curSor.fetchall()
+        cities = [city[1] for city in city_date]
+        city = ", ".join(cities)
+        print(city)
+        curSor.close(), db.close()
     else:
         sys.exit(1)
