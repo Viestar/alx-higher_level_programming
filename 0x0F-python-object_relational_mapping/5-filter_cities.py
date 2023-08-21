@@ -13,7 +13,7 @@ if __name__ == "__main__":
         query = "SELECT * FROM cities INNER JOIN states ON \
         cities.state_id = state.id WHERE state.name=%s ORDER BY cities.id ASC"
         params = argv[4]
-        curSor.execute(query, params)
+        curSor.execute(query, (params,))
         [print(", ".join(city[1])) for city in curSor.fetchall()]
         curSor.cloe(), db.close()
     else:
