@@ -11,10 +11,11 @@ if __name__ == "__main__":
     if len(argv) == 5:
         url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
         engine = create_engine(url)
+
         Session = sessionmaker(bind=engine)
         session = Session()
         param = argv[4]
-        state = session.query(State).filter(State.name == param)
+        state = session.query(State).filter_by(State_name=param).first()
         if state:
             print(state.id)
         else:
