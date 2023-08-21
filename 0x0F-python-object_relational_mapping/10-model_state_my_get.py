@@ -15,7 +15,7 @@ if __name__ == "__main__":
         session = Session()
         param = argv[4]
         state = session.query(State).filter(State.name == param)
-        if state is not None:
+        if state:
             print(state.id)
         else:
             print("Not found")
