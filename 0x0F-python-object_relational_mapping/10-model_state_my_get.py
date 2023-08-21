@@ -17,7 +17,7 @@ if __name__ == "__main__":
         param = argv[4]
         state = session.query(State).filter_by(State_name=param).first()
         if state:
-            print(state.id)
+            print(state[0])
         else:
             print("Not found")
         session.close()
