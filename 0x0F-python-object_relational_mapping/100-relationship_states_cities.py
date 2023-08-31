@@ -19,8 +19,8 @@ if __name__ == "__main__":
         session = Session()
         city = City(name="San Fancisco")
         state= State(name="California")
-        state.cities.append(state)
-        session.add(city)
+        state.cities.append(city)
+        session.add(state)
         session.commit()
         session.close()
     else:
