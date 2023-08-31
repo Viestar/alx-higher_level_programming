@@ -10,4 +10,5 @@ Project Code | Project Name | Description
 [0x04] | [cURL headers](./4-header.sh) | A Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
 [0x05] | [cURL POST parameters](./5-post_params.sh) | A Bash script that takes in a URL, sends a POST request to the passed URL, and displays the body of the response.
 [0x06] | [Find a peak](./6-peak.py) [Big O](./6-peak.txt) | A Bash script that takes in a URL, sends a POST request to the passed URL, and displays the body of the response.
-[0x05] | [Only status code](./100-status_code.sh) | A Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+[0x07] | [Only status code](./100-status_code.sh) | A Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+[0x08] | [cURL a JSON file](./101-post_json.sh) | A Bash script that sends a JSON POST request to a URL passed as the first argument, and displays the body of the response
