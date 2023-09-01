@@ -9,7 +9,7 @@ import requests
 
 if __name__ == '__main__':
     response = requests.get(argv[1])
-    if response.status_code != 200:
+    if response.status_code > 399:
         print(f"Error code: {response.status_code}")
     else:
         print(response.text)
