@@ -16,7 +16,8 @@ if __name__ == "__main__":
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        [print(f"{city[0]}: {city[1]} -> {city[2]}")
-            for city in session.query(City).order_by(City.id)]
+        for city in session.query(City).order_by(City.id):
+            print(f"{city[0]}: {city[1]} -> {city[2]}")
+
     else:
         sys.exit(1)
