@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" A script that uses sqlalchemy to list the first state.id """
+""" A script that deletes all State objects with a name containing the
+letter "a" from the database hbtn_0e_6_usa."""
 
 from model_state import Base, State
 from sys import argv
@@ -14,8 +15,10 @@ if __name__ == "__main__":
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        [session.delete(state) for state in session.query(State)
-            if "a" in state.name], session.commit()
+        for state in session.query(State).all():
+            if "a" in state.name:
+                session.delete(state)
+        session.commit()
         session.close()
     else:
         sys.exit(1)
