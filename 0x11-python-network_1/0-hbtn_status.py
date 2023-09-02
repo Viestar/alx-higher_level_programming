@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """ Script that fetches https://alx-intranet.hbtn.io/status with urllib """
 
-import urllib.request as purl
+from urllib import request
 
 if __name__ == "__main__":
-    with purl.urlopen('https://intranet.hbtn.io/status') as pool:
+    data = request.Request('https://intranet.hbtn.io/status')
+    with request.urlopen(data) as pool:
         html = pool.read()
         print('Body response:')
         print(f"\t- type: {type(html)}")
