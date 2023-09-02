@@ -6,13 +6,14 @@ and displays the body of the response (decoded in utf-8)
 
 from sys import argv
 import sys
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 from urllib.error import HTTPError
 
 if __name__ == '__main__':
-    if len(argv) > 1:
+    if len(argv) > 0:
+        data_url = Request(argv[1])
         try:
-            with urlopen(argv[1]) as data:
+            with urlopen(data_url) as data:
                 html = data.read()
                 utf8 = html.decode('utf-8')
                 print(utf8)
