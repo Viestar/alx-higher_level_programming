@@ -16,8 +16,9 @@ if __name__ == "__main__":
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        for city in session.query(City).order_by(City.id):
-            print(f"{city[0]}: {city[1]} -> {city[2]}")
+        for city in session.query(City).order_by(City.id).all():
+            state_name = city.state.name if city.state is not None else "Unknown State"
+            print(f"{city[0]}: {city[1]} -> {state_name}")
 
     else:
         sys.exit(1)
