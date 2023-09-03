@@ -7,6 +7,7 @@ from sqlalchemy.orm import sessionmaker
 from relationship_city import City
 import sys
 from relationship_state import State
+from sqlalchemy.sql import select
 
 if __name__ == "__main__":
     if len(argv) == 4:
@@ -14,8 +15,9 @@ if __name__ == "__main__":
         engine = create_engine(url)
         Session = sessionmaker(bind=engine)
         session = Session()
-        states_cities = session.query(State, City) \
-            .join(City).order_by(State.id, City.id).all()
+        result = select([City.id, City.name, State.name]).join(
+            State, City.state_id == State.id).order_by(City.id)
+        states_cities = session.execute(result)
 
         current_state = None
         for state, city in states_cities:
