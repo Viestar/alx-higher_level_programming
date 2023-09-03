@@ -13,20 +13,19 @@ if __name__ == "__main__":
     engine = create_engine(url, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = select([City.id, City.name, State.name]).join(
-        State, City.state_id == State.id).order_by(City.id)
-    states_cities = session.execute(result)
 
-    # for state in session.query(State).order_by(State.id):
-    #     print("{}: {}".format(state.id, state.name))
-    #     for city in state.cities:
-    #         print("\t{}: {}".format(city.id, city.name))
+    for state in session.query(State).order_by(State.id):
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
+    # result = select([City.id, City.name, State.name]).join(
+    #     State, City.state_id == State.id).order_by(City.id)
+    # states_cities = session.execute(result)
 
-    current_state = None
-    for state in states_cities:
-        print(f"{state.id}: {state.name}")
-        for city in states_cities:
-            print(f"\t{city.id}: {city.name}")
+    # for state in states_cities:
+    #     print(f"{state.id}: {state.name}")
+    #     for city in states_cities:
+    #         print(f"\t{city.id}: {city.name}")
 
     # Close the session
     session.close()
