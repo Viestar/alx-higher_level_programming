@@ -5,7 +5,7 @@ const request = require('request');
 const sourceUrl = 'https://swapi-api.hbtn.io/api/people/';
 const movie = process.argv[2];
 
-function retrieve_characters(movie, sourceUrl) {
+function retrieveCharacters(movie, sourceUrl) {
   request(sourceUrl, function (err, response, body) {
     if (err) {
       console.log(err);
@@ -20,8 +20,8 @@ function retrieve_characters(movie, sourceUrl) {
       }
     }
     if (obj.next !== null) {
-      retrieve_characters(movie, obj.next);
+      retrieveCharacters(movie, obj.next);
     }
   });
 }
-retrieve_characters(movie, sourceUrl);
+retrieveCharacters(movie, sourceUrl);
