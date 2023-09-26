@@ -1,9 +1,9 @@
 #!/usr/bin/node
-// Node script that computes the number of tasks completed_tasks by user id
+// Node script that computes the number of tasks completedTasks by user id
 
 const request = require('request');
 const url = process.argv[2];
-const completed_tasks = {};
+const completedTasks = {};
 
 request(url, function (err, response, body) {
   if (err) {
@@ -12,15 +12,15 @@ request(url, function (err, response, body) {
     const tasks = JSON.parse(body);
     for (const index in tasks) {
       const task = tasks[index];
-      if (task.completed_tasks === true) {
-        if (completed_tasks[task.userId] === undefined) {
-          completed_tasks[task.userId] = 1;
+      if (task.completedTasks === true) {
+        if (completedTasks[task.userId] === undefined) {
+          completedTasks[task.userId] = 1;
         } else {
-          completed_tasks[task.userId]++;
+          completedTasks[task.userId]++;
         }
       }
     }
-    console.log(completed_tasks);
+    console.log(completedTasks);
   } else {
     console.log('An error occured. Status code: ' + response.statusCode);
   }

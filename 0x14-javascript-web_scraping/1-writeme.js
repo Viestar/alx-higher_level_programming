@@ -3,10 +3,10 @@
 
 const fs = require('fs');
 const argv = process.argv;
-const write_content = argv[3];
-const writeme_file = argv[2];
+const writeContent = argv[3];
+const writemeFile = argv[2];
 
-fs.writeFile(writeme_file, write_content, 'utf-8', function (err) {
+fs.writeFile(writemeFile, writeContent, 'utf-8', function (err) {
   if (err) {
     console.log(err);
   }
