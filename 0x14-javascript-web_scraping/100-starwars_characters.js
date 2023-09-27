@@ -20,8 +20,8 @@ function retrieve_characters (movie, sourceUrl) {
       }
     }
     if (jsonObj.next !== null) {
-      retrieve_characters (movie, jsonObj.next);
+      retrieve_characters(movie, jsonObj.next);
     }
   });
 }
-retrieve_characters (movie, sourceUrl);
+retrieve_characters(movie, sourceUrl);
