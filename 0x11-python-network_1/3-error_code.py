@@ -17,6 +17,7 @@ if __name__ == "__main__":
             print(response.read().decode("ascii"))
     except urllib.error.HTTPError as err:
         print("Error code: {}".format(err.code))
+        
 # if __name__ == '__main__':
 #     if len(argv) > 0:
 #         data_url = Request(argv[1])
