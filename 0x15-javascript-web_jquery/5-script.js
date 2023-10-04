@@ -1,5 +1,5 @@
-// JavaScript script that toggles on click
-const header = $('header');
+// JavaScript script that adds a  on click
+const header = $('UL.my_list');
 $('DIV#add_item').click(function () {
-  header.toggleClass('green red');
+  header.append('<li>Item</li>');
 });
