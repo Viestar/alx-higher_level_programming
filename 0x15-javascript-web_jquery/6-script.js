@@ -1,3 +1,5 @@
+// JavaScript script that updates text on click
+const header = $('header');
 $('DIV#update_header').click(function () {
-  $('HEADER').text('New Header!!!');
+  header.text('New Header!!!');
 });
