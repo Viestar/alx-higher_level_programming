@@ -6,7 +6,7 @@ Project Code | Project Name | Description
 ----- | ------ | -----------
 [0x00] | [README](./README.md) | Project Description
 [0x00] | [No JQuery](./0-script.js) | JavaScript script that updates the text color of the header> element to red (#FF0000):
-[0x01] | [Write me](./1-writeme.js) | Node script that writes a string to a file
+[0x01] | [With JQuery](./1-script.js) | JavaScript script that updates the text color of the header > element to red(#FF0000) using jquery Api
 [0x02] | [Status code](./2-statuscode.js) | Node script that displays the status code of a GET request
 [0x03] | [Star wars movie title](./3-starwars_title.js) | Node script that prints the title of a Star Wars movie where the episode number matches a given integer
 [0x04] | [Star wars wedge Antiles](./4-starwars_count.js) | Node script that prints the number of movies where the character “Wedge Antilles” is present
