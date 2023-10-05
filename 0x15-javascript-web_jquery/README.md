@@ -14,5 +14,6 @@ Project Code | Project Name | Description
 [0x06] | [Change the text](./6-script.js) | JavaScript script that updates text on click
 [0x07] | [Star wars character](./7-script.js) | JavaScript script that fetches the character name from this URL: <https://swapi-api.alx-tools.com/api/people/5/?format=json>
 [0x08] | [Star wars movies](./8-script.js) | JavaScript script that fetches and lists the title for all movies by using this URL: <https://swapi-api.alx-tools.com/api/films/?format=json>
+[0x09] | [Say hello](./9-script.js) | JavaScript script that fetches from <https://fourtonfish.com/hellosalut/?lang=fr> and displays the value of hello from that fetch in the HTML tag DIV#hello
 
 ![Manual](../assets/Screenshot%20from%202023-07-09%2012-10-11.png)
