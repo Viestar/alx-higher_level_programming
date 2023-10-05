@@ -17,6 +17,8 @@ Project Code | Project Name | Description
 [0x09] | [Say hello](./9-script.js) | JavaScript script that fetches from <https://fourtonfish.com/hellosalut/?lang=fr> and displays the value of hello from that fetch in the HTML tag DIV#hello
 [0x10] | [No JQuery, Dom loaded](./100-script.js) | JavaScript script that updates the text color of the < header > element to red(#FF0000):
 [0x11] | [List, add, remove](./101-script.js) | JavaScript script that adds, removes and clears LI elements from a list when the user clicks:
-[0x12] | [Say hello to everybody!](./102-script.js) | JavaScript script that fetches and prints how to say “Hello” depending on the language
+ JavaScript script that fetches and prints how to say “Hello” depending on the language
+[0x12] | [Say hello to everyone](./102-script.js) | JavaScript script that fetches and prints how to say “Hello” depending on the language
+[0x13] | [And press ENTER](./103-script.js) | JavaScript script that fetches and prints how to say “Hello” depending on the language
 
 ![Manual](../assets/Screenshot%20from%202023-07-09%2012-10-11.png)
